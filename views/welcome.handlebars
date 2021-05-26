@@ -1,0 +1,40 @@
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">OSU </h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
+
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Welcome!</h1>
+        <p class="lead">CS 493 - Assignment 7: OAuth 2.0 Implementation.</p>
+        <p class="lead">
+          <form action ="https://accounts.google.com/o/oauth2/auth" method="GET" >
+
+			
+			<input type="text"  value={{data.response_type}} name="response_type" hidden/>
+			<input type="hidden" value={{data.client_id}} name="client_id"/>
+			<input type="hidden" name="redirect_uri" value={{data.redirect_uri}} />
+			<input type="hidden" value={{data.scope}} name="scope" />
+			<input type="hidden" id="state" name="state" value={{data.state}} />
+			<input class="btn btn-lg btn-secondary" type="submit" value="Send Request"></input>
+		  </form>
+        </p>
+      </main>
+
+      <footer class="mastfoot mt-auto">
+        <div class="inner">
+          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
